@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'Epilogue', sans-serif;
+}
+
+#header,
+#menu-container,
+#menu-main,
+#drop-down,
+#menu-features, 
+#menu-company {
+    display: flex;
+    align-items: flex-start;
+}
+
+#header {
+    width: 100%;
+}
+
+#company-logo {
+    padding:16px 21px;
+    margin:16px 20px;
+}
+
+#menu-container {
+    width: 100%;
+    padding: 17px 11px;
+    margin: 17px 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+}
+
+.arrow-down {
+    padding: 0 39px 0 8px;
+}
+
+.about {
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.careers {
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+#menu-login {
+    margin: 0 0 0 auto;
+}
+
+.button {
+    height: 42px;
+    width: 104px;
+    border: 1px solid hsl(0, 0%, 8%);
+    border-radius: 13px;
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 41%);
+    font-size: 14px;
+}
+
+.button-login {
+    margin: 0 4px 0 0;
+}
+
+.button-register {
+    margin: 0 19px 0 0
+}
