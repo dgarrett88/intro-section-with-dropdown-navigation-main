@@ -6,8 +6,10 @@
     box-sizing: border-box;
     position: relative;
     font-family: 'Epilogue', sans-serif;
+    background-color: hsl(0, 0%, 98%);
 }
 
+/* ______________________________________________START HEADER______________ */
 #header,
 #menu-container,
 #menu-main,
@@ -29,35 +31,53 @@
 
 #menu-container {
     width: 100%;
-    padding: 17px 11px;
-    margin: 17px 10px;
+    padding: 0 11px 0 0;
+    margin: 20px 10px auto 16px;
     font-size: 14px;
     font-weight: 500;
     color: hsl(0, 0%, 41%);
 }
 
-.arrow-down {
-    padding: 0 39px 0 8px;
+#menu-main {
+    height: 100%;
+    margin: auto 0;
 }
 
-.about {
-    padding: 0 10px;
-    margin: 0 10px;
+.menu-item {
+    padding: 4px 5px;
+}
+
+.company {
+    margin-left: 6px;
+}
+
+.arrow-down {
+    padding: 5px 3px;
+    margin: 0 24px 0 0;
 }
 
 .careers {
     padding-right: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    margin-left: 2px;
+}
+
+.about {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 10px;
     margin-right: 10px;
 }
 
 #menu-login {
-    margin: 0 0 0 auto;
+    margin: 1px 0 0 auto;
 }
 
 .button {
     height: 42px;
     width: 104px;
-    border: 1px solid hsl(0, 0%, 8%);
+    border: 1px solid hsl(0, 0%, 41%);
     border-radius: 13px;
     background-color: hsl(0, 0%, 98%);
     color: hsl(0, 0%, 41%);
@@ -66,8 +86,20 @@
 
 .button-login {
     margin: 0 4px 0 0;
+    border: none;
 }
 
 .button-register {
     margin: 0 19px 0 0
 }
+
+.button-register:hover {
+    border: 1px solid hsl(0, 0%, 8%);
+}
+
+.menu-item:hover,
+.button:hover {
+    cursor: pointer;
+    color: hsl(0, 0%, 8%);
+}
+/* ______________________________________________END HEADER________________ */
