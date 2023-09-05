@@ -9,6 +9,10 @@
     background-color: hsl(0, 0%, 98%);
 }
 
+#app-container {
+    /* width: 100vw; */
+}
+
 /* ______________________________________________START HEADER______________ */
 #header,
 #menu-container,
@@ -22,17 +26,19 @@
 
 #header {
     width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 #company-logo {
     padding:16px 21px;
-    margin:16px 20px;
+    margin:16px 1.25rem 15px 1.25rem;
 }
 
 #menu-container {
     width: 100%;
     padding: 0 11px 0 0;
-    margin: 20px 10px auto 16px;
+    margin: 1.25rem .625rem auto 16px;
     font-size: 14px;
     font-weight: 500;
     color: hsl(0, 0%, 41%);
@@ -57,17 +63,17 @@
 }
 
 .careers {
-    padding-right: 10px;
-    padding-left: 10px;
-    margin-right: 10px;
+    padding-right: .625rem;
+    padding-left: .625rem;
+    margin-right: .625rem;
     margin-left: 2px;
 }
 
 .about {
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    padding-left: .625rem;
+    padding-right: .625rem;
+    margin-left: .625rem;
+    margin-right: .625rem;
 }
 
 #menu-login {
@@ -103,3 +109,105 @@
     color: hsl(0, 0%, 8%);
 }
 /* ______________________________________________END HEADER________________ */
+
+#main-container {
+    height: 700px;
+    /* width: 100vw; */
+    max-width: 1440px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#main-left {
+    width: 45rem;
+    height: 42.813rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin: 0 auto 0 8.125rem;
+}
+
+#heading {
+    padding: .625rem;
+    margin: 1.25rem 1.563rem;
+}
+
+#heading h1 {
+    font-size: 80px;
+    font-weight: 700;
+    margin: 109px 0 0 0;
+    width: 530px;
+    letter-spacing: -1px;
+}
+
+#main-text {
+    padding: .625rem;
+    margin: .375rem 1.563rem;
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(0, 0%, 41%);
+    width: 500px;
+    line-height: 28px;
+}
+
+#learn-more-button {
+    width: 163px;
+    height: 56px;
+    margin: 2.25rem 2.188rem auto 2.188rem;
+    background-color: hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 98%);
+    border: none;
+    border-radius: 15px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#learn-more-button:hover {
+    background-color: hsl(0, 0%, 98%);
+    border: 1px solid hsl(0, 0%, 8%);
+    color: hsl(0, 0%, 8%);
+}
+
+#affiliate-logos {
+    margin: auto 2.188rem 0 2.188rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 32.6rem;
+}
+
+.affiliate {
+    margin: 0 auto 0 0;
+}
+
+#main-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 2.25rem 8rem auto 5.55rem;
+}
+
+#hero-image {
+    height: 40.063rem;
+    width: 30.05rem;
+    /* margin: 0 auto 0 6.9rem; */
+}
+
+
+@media only screen and (max-width: 1200px) {
+    #main-left {
+        width: 50%;
+        height: 100%;
+        margin-left: 6rem;
+    }
+  }
+
+  @media only screen and (max-width: 1100px) {
+    #main-left {
+        width: 50%;
+        height: 100%;
+        margin-left: 6rem;
+    }
+  }
