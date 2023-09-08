@@ -9,9 +9,7 @@
     background-color: hsl(0, 0%, 98%);
 }
 
-#app-container {
-    /* width: 100vw; */
-}
+
 
 /* ______________________________________________START HEADER______________ */
 #header,
@@ -108,6 +106,35 @@
     cursor: pointer;
     color: hsl(0, 0%, 8%);
 }
+
+#features-menu {
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 9.375rem;
+    height: 10rem;
+    top: 2.5rem;
+    background-color: white;
+    box-shadow: 5px 5px 15px #888888;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.features-list-item, 
+.features-list-item img, 
+.features-list-item p {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+
+}
+
+.features-list-item {
+    padding:.5rem
+}
+
+
+
 /* ______________________________________________END HEADER________________ */
 
 #main-container {
