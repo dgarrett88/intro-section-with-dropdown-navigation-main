@@ -34,15 +34,19 @@
 
           <div id="drop-down">
 
-            
-            <div id="menu-features">
+
+            <div 
+            onclick="expandMenu(event)" 
+            data-menu="features-menu"
+            id="menu-features"
+            >
               <p class="menu-item features">Features</p>
               <div class="menu-item arrow-down">
-                <img src="/images/icon-arrow-down.svg" alt="arrow down icon" />
+                <img class="arrow-icon" src="/images/icon-arrow-down.svg" alt="arrow icon icon" />
               </div>
 
 
-              <div id="features-menu">
+              <div class="features-menu hidden">
                 <div class="features-list-item todo">
                   <img src="/images/icon-todo.svg" alt="todo icon">
                   <p>Todo List</p>
@@ -65,10 +69,25 @@
 
 
 
-            <div id="menu-company">
+            <div
+            onclick="expandMenu(event)" 
+            data-menu="company-menu"  
+            id="menu-company">
               <p class="menu-item company">Company</p>
               <div class="menu-item arrow-down">
-                <img src="/images/icon-arrow-down.svg" alt="arrow down icon" />
+                <img class="arrow-icon" src="/images/icon-arrow-down.svg" alt="arrow icon icon" />
+              </div>
+
+              <div class="company-menu hidden">
+                <div class="company-list-item history">
+                  <p>History</p>
+                </div>
+                <div class="company-list-item our-team">
+                  <p>Our Team</p>
+                </div>
+                <div class="company-list-item blog">
+                  <p>Blog</p>
+                </div>
               </div>
 
             </div>
@@ -138,5 +157,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
+
+  <script src="/script.js"></script>
   </body>
 </html>

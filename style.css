@@ -105,17 +105,21 @@
 .button:hover {
     cursor: pointer;
     color: hsl(0, 0%, 8%);
+    font-weight: 500;
 }
 
-#features-menu {
+.features-menu {
     position: absolute;
-    display: grid;
-    place-items: center;
-    width: 9.375rem;
-    height: 10rem;
     top: 2.5rem;
-    background-color: white;
-    box-shadow: 5px 5px 15px #888888;
+    right: 1.375rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: .5rem 1.25rem;
+    width: 9.876rem;
+    height: 10rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px #88888844;
     border-radius: 10px;
     z-index: 1;
 }
@@ -125,21 +129,52 @@
 .features-list-item p {
     display: flex;
     cursor: pointer;
-    align-items: center;
-
+    background-color: white;
 }
 
 .features-list-item {
-    padding:.5rem
+    font-size: 14px;
+    padding: 0 3px 0 0;
 }
 
+.features-list-item p {
+    padding-left: 0.938rem;
+}
+
+
+.company-menu {
+    position: absolute;
+    top: 2.5rem;
+    left: .813rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 7.5rem;
+    height: 8.125rem;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 5px 5px 15px #88888844;
+    border-radius: 10px;
+    padding: .5rem 0;
+    z-index: 1;
+}
+
+.company-list-item, 
+.company-list-item p {
+    display: flex;
+    cursor: pointer;
+    background-color: white;
+}
+
+.company-list-item p {
+    margin-left: 1.25rem;
+    padding-left: 0.313rem;
+}
 
 
 /* ______________________________________________END HEADER________________ */
 
 #main-container {
     height: 700px;
-    /* width: 100vw; */
     max-width: 1440px;
     display: flex;
     justify-content: center;
@@ -220,6 +255,15 @@
     height: 40.063rem;
     width: 30.05rem;
     /* margin: 0 auto 0 6.9rem; */
+}
+
+
+.hidden {
+    display: none;
+}
+
+.show {
+    display: flex;
 }
 
 
