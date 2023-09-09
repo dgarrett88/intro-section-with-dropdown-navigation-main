@@ -1,26 +1,39 @@
-
 const expandMenu = (event) => {
-    // Close all menus
+    const currentMenuId = event.currentTarget.dataset.menu;
+
+    // Close all menus OTHER THAN the current menu
     const allMenus = document.querySelectorAll('.features-menu, .company-menu');
     allMenus.forEach(menu => {
+        if (menu.classList.contains(currentMenuId)) return;  // Skip the current menu
         menu.classList.remove('show');
         menu.classList.add('hidden');
     });
 
-    // Identify the submenu to be toggled based on the parent div's data-menu attribute
-    const menuToToggle = document.querySelector(`.${event.currentTarget.dataset.menu}`);
+    // Reset all arrow icons
+    const allArrows = document.querySelectorAll('.arrow-icon');
+    allArrows.forEach(arrow => {
+        arrow.src = "/images/icon-arrow-down.svg";
+    });
+
+    // Toggle the current menu and its arrow icon
+    const menuToToggle = document.querySelector(`.${currentMenuId}`);
+    const arrowIcon = event.currentTarget.querySelector('.arrow-icon');
     
     if (menuToToggle.classList.contains('hidden')) {
         menuToToggle.classList.remove('hidden');
         menuToToggle.classList.add('show');
+        arrowIcon.src = "/images/icon-arrow-up.svg";
     } else if (menuToToggle.classList.contains('show')) {
         menuToToggle.classList.remove('show');
         menuToToggle.classList.add('hidden');
+        arrowIcon.src = "/images/icon-arrow-down.svg";
     }
 
     // Stop the event from bubbling up
     event.stopPropagation();
 }
+
+
 
 
 // New function to handle clicks outside the menus
