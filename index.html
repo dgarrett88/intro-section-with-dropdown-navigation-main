@@ -29,53 +29,59 @@
       </div>
       <div id="menu-container">
         <div id="menu-main">
-
-
+          <img
+            class="close-button hidden"
+            src="/images/icon-close-menu.svg"
+            alt="close icon"
+          />
 
           <div id="drop-down">
-
-
-            <div 
-            onclick="expandMenu(event)" 
-            data-menu="features-menu"
-            id="menu-features"
+            <div
+              onclick="expandMenu(event)"
+              data-menu="features-menu"
+              id="menu-features"
             >
               <p class="menu-item features">Features</p>
               <div class="menu-item arrow-down">
-                <img class="arrow-icon" src="/images/icon-arrow-down.svg" alt="arrow icon icon" />
+                <img
+                  class="arrow-icon"
+                  src="/images/icon-arrow-down.svg"
+                  alt="arrow icon icon"
+                />
               </div>
-
 
               <div class="features-menu hidden">
                 <div class="features-list-item todo">
-                  <img src="/images/icon-todo.svg" alt="todo icon">
+                  <img src="/images/icon-todo.svg" alt="todo icon" />
                   <p>Todo List</p>
                 </div>
                 <div class="features-list-item calendar">
-                  <img src="/images/icon-calendar.svg" alt="calendar icon">
+                  <img src="/images/icon-calendar.svg" alt="calendar icon" />
                   <p>Calendar</p>
                 </div>
                 <div class="features-list-item reminders">
-                  <img src="/images/icon-reminders.svg" alt="reminders icon">
+                  <img src="/images/icon-reminders.svg" alt="reminders icon" />
                   <p>Reminders</p>
                 </div>
                 <div class="features-list-item planning">
-                  <img src="/images/icon-planning.svg" alt="planning icon">
+                  <img src="/images/icon-planning.svg" alt="planning icon" />
                   <p>Planning</p>
                 </div>
               </div>
             </div>
 
-
-
-
             <div
-            onclick="expandMenu(event)" 
-            data-menu="company-menu"  
-            id="menu-company">
+              onclick="expandMenu(event)"
+              data-menu="company-menu"
+              id="menu-company"
+            >
               <p class="menu-item company">Company</p>
               <div class="menu-item arrow-down">
-                <img class="arrow-icon" src="/images/icon-arrow-down.svg" alt="arrow icon icon" />
+                <img
+                  class="arrow-icon"
+                  src="/images/icon-arrow-down.svg"
+                  alt="arrow icon icon"
+                />
               </div>
 
               <div class="company-menu hidden">
@@ -89,24 +95,23 @@
                   <p>Blog</p>
                 </div>
               </div>
-
             </div>
+            <p class="menu-item careers">Careers</p>
+            <p class="menu-item about">About</p>
           </div>
-
-
-
-
-          <p class="menu-item careers">Careers</p>
-          <p class="menu-item about">About</p>
         </div>
         <div id="menu-login">
+          <div class="hamburger-icon hidden">
+            <img
+              src="/images/icon-menu.svg"
+              alt="menu icon"
+            />
+          </div>
           <button class="button button-login">Login</button>
           <button class="button button-register">Register</button>
         </div>
       </div>
     </header>
-
-
 
     <main id="main-container">
       <div id="main-left">
@@ -152,12 +157,11 @@
       </div>
     </main>
 
-
     <!-- <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div> -->
 
-  <script src="/script.js"></script>
+    <script src="/script.js"></script>
   </body>
 </html>
