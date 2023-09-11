@@ -81,22 +81,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', heroImgSelect);
 
-    // Change nav to hamburger menu under 900px width
-    const changeNav = () => {
-        const menu = document.getElementById('menu-container');
-        const mmmBurger = document.querySelector('.hamburger-icon')
+// Change nav to hamburger menu under 900px width
+const changeNav = () => {
+    const menu = document.getElementById('menu-container');
+    const mmmBurger = document.querySelector('.hamburger-icon');
+    const closeIcon = document.querySelector('.close-button');
+    const overlay = document.querySelector('.overlay');
 
-        if (window.innerWidth <= 900) {
-            menu.classList.add('hidden')
-            // mmmBurger.classList.remove('hidden')
-        }
-        else {
-            menu.classList.remove('hidden')
-            // mmmBurger.classList.add('hidden')
-        }
+    const classToggle = () => {
+        menu.classList.toggle('hidden');
+        closeIcon.classList.toggle('hidden');
+        overlay.classList.toggle('hidden');  // Toggle overlay visibility
     }
 
-    changeNav();
+    mmmBurger.addEventListener('click', classToggle);
+    closeIcon.addEventListener('click', classToggle);
+    overlay.addEventListener('click', classToggle);  // Hide menu when overlay is clicked
 
-    window.addEventListener('resize', changeNav)
+    if (window.innerWidth <= 900) {
+        menu.classList.add('hidden');
+        mmmBurger.classList.remove('hidden');
+        
+    } else {
+        menu.classList.remove('hidden');
+        mmmBurger.classList.add('hidden');
+       
+    }
+}
+
+changeNav();
+
+window.addEventListener('resize', changeNav);
+
+
+
+
+
 });
