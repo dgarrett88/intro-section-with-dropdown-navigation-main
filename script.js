@@ -87,11 +87,11 @@ const changeNav = () => {
     const mmmBurger = document.querySelector('.hamburger-icon');
     const closeIcon = document.querySelector('.close-button');
     const overlay = document.querySelector('.overlay');
-// function to toggle hidden classes
+    // function to toggle hidden classes
     const classToggle = () => {
         menu.classList.toggle('hidden');
         closeIcon.classList.toggle('hidden');
-        overlay.classList.toggle('hidden'); 
+        overlay.classList.toggle('hidden');
     }
 
     mmmBurger.addEventListener('click', classToggle);
@@ -102,11 +102,13 @@ const changeNav = () => {
     if (window.innerWidth <= 900) {
         menu.classList.add('hidden');
         mmmBurger.classList.remove('hidden');
-    // Restores hamburger menu back to original nav over 900px width 
+        // Restores hamburger menu back to original nav over 900px width
     } else {
         menu.classList.remove('hidden');
         mmmBurger.classList.add('hidden');
-       
+        // Hide the overlay when screen is resized above 900px
+        overlay.classList.add('hidden');
+        closeIcon.classList.add('hidden');
     }
 }
 

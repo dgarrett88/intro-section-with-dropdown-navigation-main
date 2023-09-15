@@ -118,7 +118,7 @@
 .features-menu {
   position: absolute;
   top: 2.5rem;
-  left: -30%;
+  left: -18%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -151,7 +151,7 @@
 .company-menu {
   position: absolute;
   top: 2.5rem;
-  right: -5%;
+  /* right: 1px; */
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -162,6 +162,7 @@
   border-radius: 10px;
   padding: 0.5rem 0;
   z-index: 1;
+  margin-left: 10px;
 }
 
 .company-list-item,
