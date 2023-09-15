@@ -87,12 +87,21 @@ const mmmBurger = document.querySelector('.hamburger-icon');
 const closeIcon = document.querySelector('.close-button');
 const overlay = document.querySelector('.overlay');
 
+const preventScrolling = () => {
+    if (menu.classList.contains('hidden')) {
+        document.body.style.overflowY = ''; // Allow scrolling
+    } else {
+        document.body.style.overflowY = 'hidden'; // Prevent scrolling
+    }
+};
+
 // function to toggle hidden classes
 const classToggle = () => {
     menu.classList.toggle('hidden');
     closeIcon.classList.toggle('hidden');
     overlay.classList.toggle('hidden');
-}
+    preventScrolling(); // Call the function to control scrolling
+};
 
 // Attach event listeners for the hamburger menu, close icon, and overlay.
 // This ensures they're attached only once.
