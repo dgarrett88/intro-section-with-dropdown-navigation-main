@@ -629,6 +629,7 @@
     text-align: center; 
     position: fixed;
     bottom:0;
+    margin-top: 2rem;
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
