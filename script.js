@@ -81,27 +81,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', heroImgSelect);
 
-// Change nav to hamburger menu under 900px width
+// Function to control all changes to navbar
 const changeNav = () => {
     const menu = document.getElementById('menu-container');
     const mmmBurger = document.querySelector('.hamburger-icon');
     const closeIcon = document.querySelector('.close-button');
     const overlay = document.querySelector('.overlay');
-
+// function to toggle hidden classes
     const classToggle = () => {
         menu.classList.toggle('hidden');
         closeIcon.classList.toggle('hidden');
-        overlay.classList.toggle('hidden');  // Toggle overlay visibility
+        overlay.classList.toggle('hidden'); 
     }
 
     mmmBurger.addEventListener('click', classToggle);
     closeIcon.addEventListener('click', classToggle);
-    overlay.addEventListener('click', classToggle);  // Hide menu when overlay is clicked
+    overlay.addEventListener('click', classToggle);
 
+    // Changes nav to hamburger menu if screen is under 900px width
     if (window.innerWidth <= 900) {
         menu.classList.add('hidden');
         mmmBurger.classList.remove('hidden');
-        
+    // Restores hamburger menu back to original nav over 900px width 
     } else {
         menu.classList.remove('hidden');
         mmmBurger.classList.add('hidden');
