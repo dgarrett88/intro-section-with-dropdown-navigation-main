@@ -81,40 +81,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('resize', heroImgSelect);
 
-// Function to control all changes to navbar
+// Variables for nav change functions
+const menu = document.getElementById('menu-container');
+const mmmBurger = document.querySelector('.hamburger-icon');
+const closeIcon = document.querySelector('.close-button');
+const overlay = document.querySelector('.overlay');
+
+// function to toggle hidden classes
+const classToggle = () => {
+    menu.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+    overlay.classList.toggle('hidden');
+}
+
+// Attach event listeners for the hamburger menu, close icon, and overlay.
+// This ensures they're attached only once.
+mmmBurger.addEventListener('click', classToggle);
+closeIcon.addEventListener('click', classToggle);
+overlay.addEventListener('click', classToggle);
+
 const changeNav = () => {
-    const menu = document.getElementById('menu-container');
-    const mmmBurger = document.querySelector('.hamburger-icon');
-    const closeIcon = document.querySelector('.close-button');
-    const overlay = document.querySelector('.overlay');
-    // function to toggle hidden classes
-    const classToggle = () => {
-        menu.classList.toggle('hidden');
-        closeIcon.classList.toggle('hidden');
-        overlay.classList.toggle('hidden');
-    }
+    // Reset everything to default states
+    menu.classList.add('hidden');
+    mmmBurger.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+    overlay.classList.add('hidden');
 
-    mmmBurger.addEventListener('click', classToggle);
-    closeIcon.addEventListener('click', classToggle);
-    overlay.addEventListener('click', classToggle);
-
-    // Changes nav to hamburger menu if screen is under 900px width
-    if (window.innerWidth <= 900) {
-        menu.classList.add('hidden');
-        mmmBurger.classList.remove('hidden');
-        // Restores hamburger menu back to original nav over 900px width
-    } else {
+    // Check the width of the window and adjust visibility of elements
+    if (window.innerWidth > 900) {
         menu.classList.remove('hidden');
         mmmBurger.classList.add('hidden');
-        // Hide the overlay when screen is resized above 900px
-        overlay.classList.add('hidden');
-        closeIcon.classList.add('hidden');
     }
 }
 
+// Call changeNav once when the document is loaded
 changeNav();
 
+// And then call it again whenever the window is resized
 window.addEventListener('resize', changeNav);
+
+
+
 
 
 
